@@ -22,11 +22,12 @@ body {
     border-radius: 8px;
     width: 100%;
     aspect-ratio: 3/2;
+
 }
 
 .travel-card span {
     font-size: 16px;
-    font-weight: 100;
+    font-weight: 300;
 }
 
 .travel-card h2 {
@@ -44,17 +45,21 @@ body {
     z-index: 1;
 }
 
-.travel-card__overlay {
-    height: 100%;
+.travel-card::before {
+    content: "";
+    height: 99%;
     width: 100%;
     position: absolute;
-    border-radius: 8px;
+    left: 0;
+    top: 0;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
     opacity: .8;
+    border-radius: 8px;
 }
 
 .travel-card img {
     width: 100%;
     object-fit: cover;
     border-radius: 8px;
+    aspect-ratio: 3/2;
 }
